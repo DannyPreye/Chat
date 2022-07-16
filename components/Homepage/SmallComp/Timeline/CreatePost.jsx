@@ -9,7 +9,7 @@ const CreatePost = () => {
           <ProfilePic img="/profile/Ellipse 8.png" />
           <textarea
             name=""
-            id=""
+            id="post"
             className="min-h-[100px] w-full text-[18px] leading-[27px] font-[500] border-transparent focus:outline-transparent focus:ring-0"
             placeholder="What's going on?"
           ></textarea>
