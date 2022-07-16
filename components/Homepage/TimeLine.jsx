@@ -9,20 +9,26 @@ import Post from "./SmallComp/Timeline/Post";
 
 const TimeLine = () => {
   return (
-    <div className=" w-full border-cyan border-r-[1px] divide-y-[1px] divide-cyan ">
-      <h1 className="text-[24px] leading-[36px] text-coolBlue ">Timeline</h1>
-      {<CreatePost img="/profile/Ellipse 8.png" />}
+    <div className=" w-full border-cyan border-r-[1px] font-poppins ">
+      <div className="grid place-items-center">
+        <h1 className="text-[24px] leading-[36px] w-[90%] text-coolBlue ">
+          Timeline
+        </h1>
+      </div>
+      <div className=" divide-y-[1px] divide-cyan">
+        {<CreatePost img="/profile/Ellipse 8.png" />}
 
-      {[1, 2, 3, 4, 5, 6, 50, 2, 2, 2, 1, 1, 3].map((id) => (
-        <Post
-          key={id}
-          img="/profile/Ellipse 8.png"
-          name="Jane"
-          username="@Janedoe"
-          time={"5m"}
-          content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id malesuada purus, a nam. Habitant nam fermentum in nunc. Cursus est."
-        />
-      ))}
+        {[1, 2, 3, 4, 5, 6, 50, 2, 2, 2, 1, 1, 3].map((id) => (
+          <Post
+            key={id}
+            img="/profile/Ellipse 8.png"
+            name="Jane"
+            username="@Janedoe"
+            time={"5m"}
+            content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id malesuada purus, a nam. Habitant nam fermentum in nunc. Cursus est."
+          />
+        ))}
+      </div>
     </div>
   );
 };
