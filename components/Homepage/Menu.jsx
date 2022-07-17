@@ -21,7 +21,7 @@ import { IoIosNotificationsOutline } from "react-icons/io";
 const Menu = () => {
   return (
     <div className=" grid place-items-center  w-[25%] border-r-[1px] border-x-cyan">
-      <div className="flex flex-col justify-between h-full fixed left-10 top-0  ">
+      <div className="flex flex-col justify-between h-full fixed left-8 top-0  ">
         <div className="grid gap-[26px] mt-[10px]">
           <div className="">
             <Image src="/beeperchat/Asset1.svg" alt="" width={70} height={70} />

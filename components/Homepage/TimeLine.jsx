@@ -9,19 +9,19 @@ import Post from "./SmallComp/Timeline/Post";
 
 const TimeLine = () => {
   return (
-    <div className=" w-full border-cyan border-r-[1px] relative ">
+    <div className=" w-fit border-cyan border-r-[0.03px] relative ">
       <label
         htmlFor="post"
-        className="w-[60px] h-[60px] cursor-pointer rounded-full bg-coolBlue grid place-items-center fixed right-[20%] bottom-10"
+        className="w-[60px] h-[60px] cursor-pointer rounded-full bg-coolBlue grid place-items-center fixed right-[33%] bottom-10"
       >
         <img src="/icons/pen-icon.svg" alt="" />
       </label>
-      <div className="grid place-items-center mb-[20px]">
+      <div className="grid place-items-center my-[20px]">
         <h1 className="text-[24px] leading-[36px] w-[90%] text-coolBlue ">
           Timeline
         </h1>
       </div>
-      <div className=" divide-y-[1px] divide-cyan">
+      <div className=" divide-y-[0.03px] divide-cyan">
         {<CreatePost img="/profile/Ellipse 8.png" />}
 
         {[1, 2, 3, 4, 5, 6, 50, 2, 2, 2, 1, 1, 3].map((id) => (

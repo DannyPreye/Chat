@@ -10,7 +10,7 @@ const CreatePost = () => {
           <textarea
             name=""
             id="post"
-            className="min-h-[100px] w-full text-[18px] leading-[27px] font-[500] border-transparent focus:outline-transparent focus:ring-0"
+            className="min-h-[100px] w-full text-[18px] leading-[27px] font-[500] border-transparent focus:border-transparent focus:outline-transparent focus:ring-0"
             placeholder="What's going on?"
           ></textarea>
         </div>
