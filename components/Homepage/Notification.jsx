@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 // next components
 import Image from "next/image";
@@ -13,8 +13,13 @@ import FriendSuggestion from "./SmallComp/Notification/FriendSuggestion";
 
 // Icons
 const Notification = () => {
+  const [totalNotification, setTotalNotification] = useState(5);
+  const [totalSuggestedFriends, setTotalSuggestedFriends] = useState(3);
+
+  const notifics = notification.slice(0, totalNotification);
+  const suggestedFriends = friends.slice(0, totalSuggestedFriends);
   return (
-    <div className="py-[30px]  grid w-[400px] place-items-center">
+    <div className="py-[30px]  grid w-[400px] border-l-[0.03px] border-cyan place-items-center">
       <div className="w-[90%] rounded-[20px]  bg-[#E6ECF4] h-[50px] flex items-center py-[20px] px-[18px] gap-[15px]">
         <img
           src="/icons/search-icon.svg"
@@ -30,26 +35,42 @@ const Notification = () => {
         />
       </div>
       <NotificationLayout heading="Trends for you">
-        <div className="">
-          {notification.map((info, index) => (
-            <Trending
-              key={index}
-              beeps={info.beeps}
-              topic={info.topic}
-              trending={info.location}
-            />
-          ))}
-        </div>
+        {notifics.map((info, index) => (
+          <Trending
+            key={index}
+            beeps={info.beeps}
+            topic={info.topic}
+            trending={info.location}
+          />
+        ))}
+        <button
+          className="text-coolBlue text-[13px] leading-[19.5px] font-[600]"
+          onClick={() =>
+            setTotalNotification(totalNotification + totalNotification)
+          }
+        >
+          Show More
+        </button>
       </NotificationLayout>
 
       <NotificationLayout heading="Who to follow">
-        {friends.map((friend, index) => (
+        {suggestedFriends.map((friend, index) => (
           <FriendSuggestion
             img={friend.pics}
             name={friend.name}
             username={friend.username}
           />
         ))}
+        <button
+          className="text-coolBlue text-[13px] leading-[19.5px] font-[600] mt-[11px]"
+          onClick={() =>
+            setTotalSuggestedFriends(
+              totalSuggestedFriends + totalSuggestedFriends
+            )
+          }
+        >
+          Show More
+        </button>
       </NotificationLayout>
     </div>
   );

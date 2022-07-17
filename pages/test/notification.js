@@ -42,3 +42,75 @@ export const friends = [
         pics: "/friends/Ellipse 25.png"
     },
 ]
+
+export const post = [
+    {
+        name: "Trey",
+        username: "@treymay",
+        post: "A eget suspendisse quam enim mi varius tellus s.",
+        time: "5m",
+        img: "/profile/Ellipse 8.png"
+    },
+    {
+        name: "Trey",
+        username: "@treymay",
+        post: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id malesuada purus, a nam. Habitant nam fermentum in nunc. Cursus est.",
+        time: "8m",
+        img: "/profile/Ellipse 9.png"
+
+    },
+    {
+        name: "Trey",
+        username: "@treymay",
+        post: "A eget suspendisse quam enim mi varius tellus s.",
+        time: "10m",
+        img: "/profile/Ellipse 12.png"
+
+    },
+    {
+        name: "Trey",
+        username: "@treymay",
+        post: "A eget suspendisse quam enim mi varius tellus s.",
+        time: "15m",
+        img: "/profile/Ellipse 14.png"
+
+    },
+    {
+        name: "Trey",
+        username: "@treymay",
+        post: "A eget suspendisse quam enim mi varius tellus s.",
+        time: "20m",
+        img: "/profile/Ellipse 16.png"
+
+    },
+]
+
+export const masonry = [
+    {
+        img: "/masonry/Rectangle 81.png"
+    },
+    {
+        img: "/masonry/Rectangle 83.png"
+    },
+    {
+        img: "/masonry/Rectangle 84.png"
+    },
+    {
+        img: "/masonry/Rectangle 85.png"
+    },
+    {
+        img: "/masonry/Rectangle 86.png"
+    },
+    {
+        img: "/masonry/Rectangle 87.png"
+    },
+    {
+        img: "/masonry/Rectangle 88.png"
+    },
+    {
+        img: "/masonry/Rectangle 89.png"
+    },
+    {
+        img: "/masonry/Rectangle 90.png"
+    },
+] 

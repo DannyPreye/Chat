@@ -20,7 +20,7 @@ import { IoIosNotificationsOutline } from "react-icons/io";
 
 const Menu = () => {
   return (
-    <div className=" grid place-items-center  w-[25%] border-r-[1px] border-x-cyan">
+    <div className=" grid place-items-center  w-[25%] border-r-[1px] hide-scrollbar border-cyan">
       <div className="flex flex-col justify-between h-full fixed left-8 top-0  ">
         <div className="grid gap-[26px] mt-[10px]">
           <div className="">
@@ -31,8 +31,12 @@ const Menu = () => {
             Icon={AiFillHome}
             link="/home/timeLine"
           />
-          <MenuItem content="Tour" Icon={BsGlobe} link="/" />
-          <MenuItem content="Notification" Icon={IoIosNotificationsOutline} />
+          <MenuItem content="Tour" Icon={BsGlobe} link="/home/tour" />
+          <MenuItem
+            content="Notification"
+            Icon={IoIosNotificationsOutline}
+            link="/home/notification"
+          />
           <MenuItem content="Messages" Icon={BiEnvelope} />
           <MenuItem content="Saved" Icon={BsBookmark} />
           <MenuItem content="Profile" Icon={BiUser} />

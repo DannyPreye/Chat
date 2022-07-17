@@ -1,7 +1,8 @@
 import React from "react";
 import dynamic from "next/dynamic";
-// custom components
 
+// custom components
+import { post } from "../../pages/test/notification";
 const CreatePost = dynamic(() => import("./SmallComp/Timeline/CreatePost"), {
   ssr: false,
 });
@@ -9,7 +10,7 @@ import Post from "./SmallComp/Timeline/Post";
 
 const TimeLine = () => {
   return (
-    <div className=" w-fit border-cyan border-r-[0.03px] relative ">
+    <div className=" w-[608px] relative ">
       <label
         htmlFor="post"
         className="w-[60px] h-[60px] cursor-pointer rounded-full bg-coolBlue grid place-items-center fixed right-[33%] bottom-10"
@@ -24,14 +25,14 @@ const TimeLine = () => {
       <div className=" divide-y-[0.03px] divide-cyan">
         {<CreatePost img="/profile/Ellipse 8.png" />}
 
-        {[1, 2, 3, 4, 5, 6, 50, 2, 2, 2, 1, 1, 3].map((id) => (
+        {post.map((pos, index) => (
           <Post
-            key={id}
-            img="/profile/Ellipse 8.png"
-            name="Jane"
-            username="@Janedoe"
-            time={"5m"}
-            content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id malesuada purus, a nam. Habitant nam fermentum in nunc. Cursus est."
+            key={index}
+            img={pos.img}
+            name={pos.name}
+            username={pos.username}
+            time={pos.time}
+            content={pos.post}
           />
         ))}
       </div>

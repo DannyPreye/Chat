@@ -17,10 +17,12 @@ const Post = ({ img, name, username, time, content }) => {
   return (
     <div className="grid place-items-center py-[20px]">
       <div className="w-[90%] grid place-items-center">
-        <div className="flex gap-[5px] w-full">
-          <ProfilePic img={img} />
+        <div className="grid grid-cols-[1fr,10fr]   w-full">
+          <div className="col-span-1">
+            <ProfilePic img={img} />
+          </div>
           {/* content */}
-          <div>
+          <div className="">
             <div className="font-[500] text-[20px] leading-[] flex gap-2 text-text-gray">
               <h2 className="text-black">{name}</h2>
               <p className="flex items-baseline gap-2">
@@ -33,7 +35,7 @@ const Post = ({ img, name, username, time, content }) => {
         </div>
 
         {/* Icons */}
-        <div className="flex justify-between w-full mt-[10px]">
+        <div className="flex justify-between w-[90%] mt-[10px]">
           <div>
             <img src="/icons/post-icons/comment-icon.svg" alt="" className="" />
           </div>

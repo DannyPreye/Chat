@@ -4,7 +4,7 @@ import Notification from "../components/Homepage/Notification";
 
 const HomeLayout = ({ children }) => {
   return (
-    <div className="flex justify-center mx-auto container  font-poppins">
+    <div className="flex justify-center mx-auto container   font-poppins">
       <Menu />
       <div className="">{children}</div>
       <div className="">
