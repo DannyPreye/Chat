@@ -12,11 +12,11 @@ const TimeLine = () => {
     <div className=" w-full border-cyan border-r-[1px] relative ">
       <label
         htmlFor="post"
-        className="w-[60px] h-[60px] cursor-pointer rounded-full bg-coolBlue grid place-items-center fixed right-60 bottom-0"
+        className="w-[60px] h-[60px] cursor-pointer rounded-full bg-coolBlue grid place-items-center fixed right-[20%] bottom-10"
       >
         <img src="/icons/pen-icon.svg" alt="" />
       </label>
-      <div className="grid place-items-center">
+      <div className="grid place-items-center mb-[20px]">
         <h1 className="text-[24px] leading-[36px] w-[90%] text-coolBlue ">
           Timeline
         </h1>
