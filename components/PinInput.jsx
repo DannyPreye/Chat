@@ -9,7 +9,7 @@ const PinInput = () => {
   return (
     <input
       type="password"
-      className="w-[69px] h-[75px] rounded-[10px] text-center text-[35px] font-[500] leading-[119.5%] border-transparent focus:ring-0"
+      className="w-[60px] h-[55px] rounded-[10px] text-center text-[28px] font-[500] leading-[119.5%] border-transparent focus:ring-0"
       placeholder="*"
       maxLength={1}
       onKeyUp={toggleNext}

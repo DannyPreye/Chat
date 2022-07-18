@@ -26,7 +26,7 @@ const AuthLayout = ({ children, heading }) => {
                   width={93.44}
                 />
               </div>
-              <h1 className=" mt-[30px] mb-[10px] text-coolBlue font-[500] text-[30px] text-center leading-[35.85px]">
+              <h1 className=" mt-[30px] mb-[10px] text-coolBlue font-[500] text-[25px] text-center leading-[30.85px]">
                 {heading}
               </h1>
               <div className="gri">{children}</div>

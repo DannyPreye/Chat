@@ -23,7 +23,7 @@ const RadioInput = ({
 
       <label
         htmlFor={id}
-        className={`font-poppins font-[400] h-[29px] text-[18px] md:text-[24px] text-${color} leading-[119.5%]  mt-[20px]`}
+        className={`font-poppins font-[400] h-[29px] md:text-[20px] text-${color} leading-[119.5%]  mt-[20px]`}
       >
         {text}
       </label>

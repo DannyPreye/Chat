@@ -24,3 +24,20 @@ input:focus{
 .hide-scrollbar::-webkit-scrollbar{
     display: none;
 }
+.gridLayout{
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows:max-content;
+    
+   
+    
+}
+.gridLayout  div:nth-of-type(3) {
+   grid-row: 2/ 3;
+   grid-column: 1/2;
+}
+.gridLayout img:nth-of-type(2) {
+    grid-row: 1/2;
+    grid-column: 1/2;
+}

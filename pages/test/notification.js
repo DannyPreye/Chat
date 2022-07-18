@@ -87,30 +87,50 @@ export const post = [
 
 export const masonry = [
     {
-        img: "/masonry/Rectangle 81.png"
+        img: "/masonry/Rectangle 81.png",
+        width: 181,
+        height: 146,
     },
     {
-        img: "/masonry/Rectangle 83.png"
+        img: "/masonry/Rectangle 83.png",
+        width: 245,
+        height: 310
     },
     {
-        img: "/masonry/Rectangle 84.png"
+        img: "/masonry/Rectangle 84.png",
+        width: 181,
+        height: 427,
+
     },
     {
-        img: "/masonry/Rectangle 85.png"
+        img: "/masonry/Rectangle 85.png",
+        width: 174,
+        height: 310,
     },
     {
-        img: "/masonry/Rectangle 86.png"
+        img: "/masonry/Rectangle 86.png",
+        width: 419,
+        height: 263
     },
     {
-        img: "/masonry/Rectangle 87.png"
+        img: "/masonry/Rectangle 87.png",
+        width: 323,
+        height: 180
     },
     {
-        img: "/masonry/Rectangle 88.png"
+        img: "/masonry/Rectangle 88.png",
+        width: 277,
+        height: 180
+
     },
     {
-        img: "/masonry/Rectangle 89.png"
+        img: "/masonry/Rectangle 89.png",
+        width: 323,
+        height: 183
     },
     {
-        img: "/masonry/Rectangle 90.png"
+        img: "/masonry/Rectangle 90.png",
+        width: 277,
+        height: 185
     },
 ] 

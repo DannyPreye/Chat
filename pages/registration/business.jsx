@@ -2,11 +2,10 @@ import React from "react";
 
 import Image from "next/image";
 
-import Layout from "../components/Layout";
-import Input from "../components/form/Input";
-import Select from "../components/form/Select";
-import Remember from "../components/form/Remember";
-import FormButton from "../components/form/FormButton";
+import Layout from "../../components/Layout";
+import Input from "../../components/form/Input";
+import Remember from "../../components/form/Remember";
+import FormButton from "../../components/form/FormButton";
 
 const business = () => {
   return (
@@ -21,11 +20,11 @@ const business = () => {
                 height={70}
                 alt="beeper logo"
               />
-              <h1 className="font-poppins font-[500] text-[36px] leading-[54px] text-coolBlue">
+              <h1 className="font-poppins font-[500] text-[30px] leading-[50px] text-coolBlue">
                 Beeperchat
               </h1>
             </div>
-            <p className="font-[600] font-poppins text-[18px] leading-[27px] mt-[15px] text-coolBlue">
+            <p className="font-[600] font-poppins text-[18px] leading-[22px] mt-[15px] text-coolBlue">
               Create your business account
             </p>
           </div>
@@ -38,7 +37,7 @@ const business = () => {
               placeholder="Business name"
             />
 
-            <Input type="date" id="dob" name="dob" label="Date of Birth" />
+            <Input type="text" date id="dob" name="dob" label="Date of Birth" />
 
             <Input
               type="email"

@@ -16,7 +16,7 @@ const IconCard = ({ children, heading }) => {
               width={70}
             />
             {heading && (
-              <h1 className=" my-[30px] text-coolBlue font-[500] text-[30px] leading-[35.85px]">
+              <h1 className=" my-[30px] text-coolBlue font-[500] text-[25px] leading-[30.85px]">
                 {heading}
               </h1>
             )}

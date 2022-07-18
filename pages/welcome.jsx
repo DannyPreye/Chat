@@ -27,14 +27,14 @@ const Welcome = () => {
               height={70}
               width={70}
             />
-            <h1 className="mt-[18px] mb-[40px] text-coolBlue font-[500] text-[30px] leading-[35.85px]">
+            <h1 className="mt-[18px] mb-[35px] text-coolBlue font-[500] text-[25px] leading-[35.85px]">
               Welcome
             </h1>
-            <p className="font-poppins text-[19px] md:text-[25px] leading-[29.87px] text-center text-coolBlue">
+            <p className="font-poppins text-[19px] md:text-[20px] leading-[29.87px] text-center text-coolBlue">
               Who are you creating this account for?
             </p>
           </div>
-          <div className="mt-[20px] w-full md:w-full  flex flex-col items-center">
+          <div className="mt-[15px] w-full md:w-full  flex flex-col items-center">
             <div className="flex flex-col items-start w-[80%]">
               <RadioInput
                 text="Yourself"
@@ -51,7 +51,7 @@ const Welcome = () => {
                 handleChange={handleChange}
               />
             </div>
-            <div className="md:my-[40px] w-full grid place-items-center my-[80px]">
+            <div className="md:my-[40px] w-full grid place-items-center ">
               <Button
                 width={160}
                 heigt={55}

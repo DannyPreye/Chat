@@ -3,17 +3,24 @@ import HomeLayout from "../../Layout/HomeLayout";
 import Masonry from "react-masonry-css";
 import { masonry } from "../test/notification";
 
+import dynamic from "next/dist/shared/lib/dynamic";
+import Image from "next/image";
+
+const { GridLayout } = dynamic(() => import("@egjs/react-layout"), {
+  ssr: false,
+});
 const tour = () => {
   return (
-    <div className="w-[608px] ">
-      <div
-        className=" grid grid-cols-3 grid-flow-dense m-0 gap-0"
-        breakpointCols={3}
-      >
+    <div className="w-[608px]  grid place-items-center ">
+      <div className="gridLayout">
         {masonry.map((img, id) => (
-          <div>
-            {" "}
-            <img src={img.img} key={id} />
+          <div key={id}>
+            <Image
+              src={img.img}
+              width={img.width}
+              height={img.height}
+              className=""
+            />
           </div>
         ))}
       </div>
