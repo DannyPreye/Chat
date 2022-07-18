@@ -38,6 +38,13 @@ const business = () => {
             />
 
             <Input type="text" date id="dob" name="dob" label="Date of Birth" />
+            <Input
+              type="tel"
+              id="phone"
+              name="phone"
+              label="Phone Number"
+              placeholder="Your phone number"
+            />
 
             <Input
               type="email"
