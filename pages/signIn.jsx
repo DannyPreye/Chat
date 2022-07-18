@@ -11,14 +11,14 @@ const signIn = () => {
       <div className=" grid place-item">
         <div className="h-fit">
           <div>
-            <h1 className="text-coolBlue font-[500] text-[45px] leading-[68px]">
+            <h1 className="text-coolBlue font-[500] text-[25px] mt-5 leading-[30px]">
               Welcome Back
             </h1>
-            <h3 className="font-[600] text-[18px] leading-[21.51px] text-coolBlue">
+            <h3 className="font-[600] text-[15px] mt-1 leading-[21.51px] text-coolBlue">
               Let’s Sign You In!
             </h3>
           </div>
-          <div>
+          <div className="mt-2">
             <Input
               type="text"
               id="username"

@@ -20,7 +20,7 @@ const Remember = ({ name, firstText, secondText, reg }) => {
         </label>
         <label
           htmlFor="text"
-          className={`ml-[9px] text-[13px] leading-[21px] font-[500]  ${
+          className={`ml-[9px] text-[13px] leading-[15px] font-[500]  ${
             !reg && "hidden"
           }`}
         >
