@@ -1,7 +1,7 @@
 import React from "react";
 import HomeLayout from "../../Layout/HomeLayout";
 import Masonry from "react-masonry-css";
-import { masonry } from "../test/notification";
+import { masonry } from "../../test/notification";
 
 import dynamic from "next/dist/shared/lib/dynamic";
 import Image from "next/image";

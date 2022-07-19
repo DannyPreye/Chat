@@ -2,7 +2,8 @@ import React from "react";
 import dynamic from "next/dynamic";
 
 // custom components
-import { post } from "../../pages/test/notification";
+
+import { post } from "../../test/notification";
 const CreatePost = dynamic(() => import("./SmallComp/Timeline/CreatePost"), {
   ssr: false,
 });

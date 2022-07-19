@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 
 // test values
-import { notification, friends } from "../../pages/test/notification";
+import { notification, friends } from "../../test/notification";
 
 // custom components
 import NotificationLayout from "./SmallComp/Notification/NotificationLayout";
