@@ -56,6 +56,7 @@ const Notification = () => {
       <NotificationLayout heading="Who to follow">
         {suggestedFriends.map((friend, index) => (
           <FriendSuggestion
+            key={index}
             img={friend.pics}
             name={friend.name}
             username={friend.username}

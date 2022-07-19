@@ -16,6 +16,7 @@ const tour = () => {
         {masonry.map((img, id) => (
           <div key={id}>
             <Image
+              alt=""
               src={img.img}
               width={img.width}
               height={img.height}
