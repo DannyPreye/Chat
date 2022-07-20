@@ -16,7 +16,7 @@ const AuthLayout = ({ children, heading }) => {
         className={` container  h-screen  mx-auto grid place-items-center relative `}
       >
         <div className="container  mx-auto grid place-items-center   md:mt-0 font-poppins relative ">
-          <div className="min-w-[809px]   bg-cyan rounded-[20px]  grid place-items-center">
+          <div className="min-w-[60%]   bg-cyan rounded-[20px]  grid place-items-center">
             <div className="grid h-fit place-items-center ">
               <div className="mt-[50px]">
                 <Image

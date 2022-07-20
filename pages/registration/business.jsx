@@ -37,13 +37,20 @@ const business = () => {
               placeholder="Business name"
             />
 
-            <Input type="text" date id="dob" name="dob" label="Date of Birth" />
+            <Input
+              type="text"
+              date
+              id="dob"
+              name="dob"
+              label="Date of Birth"
+              placeholder="Date of Birth"
+            />
             <Input
               type="tel"
               id="phone"
               name="phone"
               label="Phone Number"
-              placeholder="Your phone number"
+              placeholder="Phone number"
             />
 
             <Input
@@ -51,7 +58,7 @@ const business = () => {
               id="email"
               name="email"
               label="Email Address"
-              placeholder="Enter your email"
+              placeholder="Email"
             />
             <Input
               type="password"

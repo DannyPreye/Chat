@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 //
 import Picker from "emoji-picker-react";
 
 // custom components
 import ProfilePic from "./ProfilePic";
+
+import { post } from "../../../../test/notification";
 
 const CreatePost = () => {
   const [emoji, setEmoji] = useState(false);
@@ -14,6 +16,22 @@ const CreatePost = () => {
     setInput((prevInput) => prevInput + emojiObject.emoji);
     setEmoji(false);
   };
+  useEffect(() => {
+    beep;
+  }, [post]);
+
+  const beep = async () => {
+    post.push({
+      name: "Jane",
+      username: "@janedoe",
+      post: input,
+      time: "5m",
+      img: "/profile/Ellipse 8.png",
+    });
+    setInput("");
+    console.log("dhfjkhajk");
+  };
+
   return (
     <div className="grid place-items-center py-[12px]">
       <div className="w-[90%] grid place-items-center">
@@ -69,7 +87,10 @@ const CreatePost = () => {
               </label>
             </div>
           </div>
-          <button className="w-[64px] h-[40px] rounded-[10px] bg-coolBlue text-[20px] leading-[30px] font-[500] text-white">
+          <button
+            onClick={beep}
+            className="w-[64px] h-[40px] rounded-[10px] bg-coolBlue text-[20px] leading-[30px] font-[500] text-white"
+          >
             Beep
           </button>
         </div>

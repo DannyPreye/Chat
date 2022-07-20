@@ -31,12 +31,12 @@ const Input = ({ type, id, date, name, label, placeholder }) => {
           onFocus={focus}
           id={id}
           placeholder={placeholder}
-          className={` block w-full border-cyan border-b-[2px] pl-0 text-text-gray border-t-transparent border-l-transparent border-r-transparent focus:border-r-transparent focus:border-t-transparent focus:border-l-transparent focus:ring-0 py-[1px] text-[14px] leading-[18px] font-poppins ${
+          className={` block w-full border-cyan border-b-[2px] pl-0 text-text-gray border-t-transparent border-l-transparent border-r-transparent focus:border-r-transparent focus:border-t-transparent focus:border-l-transparent focus:ring-0 py-[6px] text-[14px] leading-[28px] font-poppins ${
             type === "date" ? "placehoder-gray-500 " : ""
           }`}
         />
         {type == "password" ? (
-          <div className="absolute right-[1rem] top-[-0.3rem]">
+          <div className="absolute right-[1rem] bottom-[0.4rem]">
             <AiOutlineEyeInvisible
               onClick={changePassword}
               className={`w-[20px] h-[20px] ${!click ? "hidden" : ""} `}

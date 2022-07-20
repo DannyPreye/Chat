@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 // next components
 import dynamic from "next/dynamic";
@@ -12,6 +12,8 @@ const CreatePost = dynamic(() => import("./SmallComp/Timeline/CreatePost"), {
 import Post from "./SmallComp/Timeline/Post";
 
 const TimeLine = () => {
+  useEffect(() => {}, [post]);
+
   return (
     <div className=" w-[608px] relative ">
       <label
