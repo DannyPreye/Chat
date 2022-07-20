@@ -68,7 +68,7 @@ const Post = ({ img, name, username, time, content }) => {
             <img
               src="/icons/post-icons/dislike-icon.svg"
               alt=""
-              className={`${unlike && "bg-red"} text-[30px]`}
+              className={`${unlike && ""} text-[30px]`}
             />
           </div>
           <div className="cursor-pointer">

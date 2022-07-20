@@ -21,15 +21,7 @@ const CreatePost = () => {
   }, [post]);
 
   const beep = async () => {
-    post.push({
-      name: "Jane",
-      username: "@janedoe",
-      post: input,
-      time: "5m",
-      img: "/profile/Ellipse 8.png",
-    });
     setInput("");
-    console.log("dhfjkhajk");
   };
 
   return (
