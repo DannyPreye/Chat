@@ -15,7 +15,7 @@ const MenuItem = ({ Icon, content, link }) => {
       >
         <div className="flex gap-[5px] items-center ">
           <Icon className="w-[20px] h-[20px]   " />
-          <p className="font-[500] leading-[35px] text-[20px] ">{content}</p>
+          <p className="font-[500] leading-[35px] text-[16px] ">{content}</p>
         </div>
       </a>
     </Link>

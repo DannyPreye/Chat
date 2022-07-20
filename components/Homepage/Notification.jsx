@@ -11,7 +11,6 @@ import NotificationLayout from "./SmallComp/Notification/NotificationLayout";
 import Trending from "./SmallComp/Notification/Trending";
 import FriendSuggestion from "./SmallComp/Notification/FriendSuggestion";
 
-// Icons
 const Notification = () => {
   const [totalNotification, setTotalNotification] = useState(5);
   const [totalSuggestedFriends, setTotalSuggestedFriends] = useState(3);

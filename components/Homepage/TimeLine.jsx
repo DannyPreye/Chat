@@ -1,4 +1,6 @@
 import React from "react";
+
+// next components
 import dynamic from "next/dynamic";
 
 // custom components

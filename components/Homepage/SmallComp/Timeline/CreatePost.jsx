@@ -1,7 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
+
+//
+import Picker from "emoji-picker-react";
+
+// custom components
 import ProfilePic from "./ProfilePic";
 
 const CreatePost = () => {
+  const [emoji, setEmoji] = useState(false);
+  const [input, setInput] = useState("");
+
+  const pickEmoji = (e, emojiObject) => {
+    setInput((prevInput) => prevInput + emojiObject.emoji);
+    setEmoji(false);
+  };
   return (
     <div className="grid place-items-center py-[12px]">
       <div className="w-[90%] grid place-items-center">
@@ -9,17 +21,19 @@ const CreatePost = () => {
           <ProfilePic img="/profile/Ellipse 8.png" />
           <textarea
             name=""
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
             id="post"
-            className="min-h-[100px] w-full text-[18px] leading-[27px] font-[500] border-transparent focus:border-transparent focus:outline-transparent focus:ring-0"
+            className="min-h-[100px] w-full text-[18px] leading-[27px] font-[500] resize-none border-transparent focus:border-transparent focus:outline-transparent focus:ring-0"
             placeholder="What's going on?"
           ></textarea>
         </div>
 
         {/* Icons */}
-        <div className="flex justify-between w-[80%] mt-[10px]">
+        <div className="flex justify-between w-[80%] mt-[10px] relative">
           <div className="flex gap-[10px]">
             <div>
-              <label htmlFor="img-file">
+              <label htmlFor="img-file" className="cursor-pointer">
                 <img src="/icons/image-icon.svg" alt="" className="" />
               </label>
               <input
@@ -27,26 +41,30 @@ const CreatePost = () => {
                 hidden
                 id="img-file"
                 accept="img/jpg, img/jpeg, img/png"
-                className=""
+                className="image gallery icon"
               />
             </div>
 
             <div className="">
-              <label htmlFor="gif-file">
-                <img src="/icons/gif.svg" alt="" />
-              </label>
-
-              <input type="file" hidden id="gif-file" accept="img/gif" />
-            </div>
-
-            <div>
-              <label htmlFor="gif-file">
-                <img src="/icons/emoji-smile.svg" alt="" />
+              <label htmlFor="gif-file" className="cursor-pointer">
+                <img src="/icons/gif.svg" alt="gif icon" />
               </label>
             </div>
 
             <div>
-              <label htmlFor="gif-file">
+              <label
+                htmlFor=""
+                className="cursor-pointer"
+                onClick={() => {
+                  setEmoji(!emoji);
+                }}
+              >
+                <img src="/icons/emoji-smile.svg" alt="smile icon" />
+              </label>
+            </div>
+
+            <div>
+              <label htmlFor="" className="cursor-pointer">
                 <img src="/icons/location.svg" alt="" />
               </label>
             </div>
@@ -55,6 +73,18 @@ const CreatePost = () => {
             Beep
           </button>
         </div>
+        {emoji && (
+          <Picker
+            onEmojiClick={pickEmoji}
+            disableSkinTonePicker={false}
+            pickerStyle={{
+              position: "absolute",
+              top: "13rem",
+              left: "-4rem",
+              zIndex: 10,
+            }}
+          />
+        )}
       </div>
     </div>
   );
