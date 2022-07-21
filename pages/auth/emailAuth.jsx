@@ -7,15 +7,15 @@ import PinInput from "../../components/PinInput";
 const emailAuth = () => {
   const inputs = useRef();
   const inputElements = [];
-  useEffect(() => {
-    // work on this later
-    inputElements = inputs.current.childNodes;
-    const paste = () => {
-      const nodes = [...inputElements];
-      nodes.map((input) => console.log(input.placeholder));
-    };
-    paste();
-  }, [inputs]);
+  // useEffect(() => {
+  //   // work on this later
+  //   inputElements = inputs.current.childNodes;
+  //   const paste = () => {
+  //     const nodes = [...inputElements];
+  //     nodes.map((input) => console.log(input.placeholder));
+  //   };
+  //   paste();
+  // }, [inputs]);
 
   return (
     <AuthLayout heading="OTP Authentication">

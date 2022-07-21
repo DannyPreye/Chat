@@ -22,7 +22,7 @@ const tour = () => {
       marginTop="10px"
     >
       {tourPics.map((img, index) => (
-        <GridItem colSpan={"auto"}>
+        <GridItem colSpan={"auto"} key={index}>
           <img src={img.img} alt="" />
         </GridItem>
       ))}
