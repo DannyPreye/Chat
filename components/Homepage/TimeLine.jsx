@@ -3,25 +3,50 @@ import React, { useEffect } from "react";
 // next components
 import dynamic from "next/dynamic";
 
-// custom components
+// Chakra Components
+import {
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
+} from "@chakra-ui/react";
+import { useDisclosure } from "@chakra-ui/react";
 
+// development test
 import { post } from "../../test/notification";
+
+// custom components
 const CreatePost = dynamic(() => import("./SmallComp/Timeline/CreatePost"), {
   ssr: false,
 });
+
 import Post from "./SmallComp/Timeline/Post";
 
 const TimeLine = () => {
-  useEffect(() => {}, [post]);
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
     <div className=" w-[608px] relative ">
-      <label
+      <Modal isOpen={isOpen} onClose={onClose} isCentered={true} size="xl">
+        <ModalOverlay />
+        <ModalContent>
+          <ModalCloseButton />
+          <ModalBody>
+            <CreatePost />
+          </ModalBody>
+        </ModalContent>
+      </Modal>
+
+      <div
+        onClick={onOpen}
         htmlFor="post"
-        className="w-[60px] h-[60px] cursor-pointer rounded-full bg-coolBlue grid place-items-center fixed right-[33%] bottom-10"
+        className="w-[40px] h-[40px] cursor-pointer rounded-full bg-coolBlue grid place-items-center fixed right-[33%] bottom-10"
       >
-        <img src="/icons/pen-icon.svg" alt="" />
-      </label>
+        <img src="/icons/pen-icon.svg" alt="" className="h-[20px] w-[20px]" />
+      </div>
       <div className="grid place-items-center my-[20px]">
         <h1 className="text-[24px] leading-[36px] w-[90%] text-coolBlue ">
           Timeline

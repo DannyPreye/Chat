@@ -1,10 +1,22 @@
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import AuthLayout from "../../components/AuthLayout";
 import Button from "../../components/Button";
 import PinInput from "../../components/PinInput";
 
 const emailAuth = () => {
+  const inputs = useRef();
+  const inputElements = [];
+  useEffect(() => {
+    // work on this later
+    inputElements = inputs.current.childNodes;
+    const paste = () => {
+      const nodes = [...inputElements];
+      nodes.map((input) => console.log(input.placeholder));
+    };
+    paste();
+  }, [inputs]);
+
   return (
     <AuthLayout heading="OTP Authentication">
       <div className="h-fit ">
@@ -12,7 +24,7 @@ const emailAuth = () => {
           An authentication code has been sent to +234 803 875 5279
         </h3>
         <div className="w-full grid place-items-center  mt-[20px]">
-          <div className="flex gap-[20px]  justify-center w-[80%]">
+          <div ref={inputs} className="flex gap-[20px]  justify-center w-[80%]">
             {[1, 2, 3, 4, 5, 6].map((id) => (
               <PinInput key={id} />
             ))}

@@ -20,7 +20,7 @@ const Input = ({ type, id, date, name, label, placeholder }) => {
     type === "password" && setClick(true);
   };
   return (
-    <div className="h-fit w-[357px] mt-[2px]">
+    <div className="h-fit w-[357px] mt-[5px]">
       {/* <label className="text-[1.2vw] leading-[20px] font-[500]" htmlFor={id}>
         {label}
       </label> */}
@@ -31,7 +31,7 @@ const Input = ({ type, id, date, name, label, placeholder }) => {
           onFocus={focus}
           id={id}
           placeholder={placeholder}
-          className={` block w-full border-cyan border-b-[2px] pl-0 text-text-gray border-t-transparent border-l-transparent border-r-transparent focus:border-r-transparent focus:border-t-transparent focus:border-l-transparent focus:ring-0 py-[6px] text-[14px] leading-[28px] font-poppins ${
+          className={` block w-full border-cyan border-b-[2px] pl-0 text-text-gray border-t-transparent border-l-transparent border-r-transparent focus:border-r-transparent focus:border-t-transparent focus:border-l-transparent focus:ring-0 py-[1px] text-[14px]  font-poppins ${
             type === "date" ? "placehoder-gray-500 " : ""
           }`}
         />

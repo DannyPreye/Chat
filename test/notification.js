@@ -85,7 +85,7 @@ export const post = [
     },
 ]
 
-export const masonry = [
+export const tourPics = [
     {
         img: "/masonry/Rectangle 81.png",
         width: 181,
@@ -133,4 +133,13 @@ export const masonry = [
         width: 277,
         height: 185
     },
-] 
+]
+
+export const user = [
+    {
+        id: 1,
+        name: "Jane",
+        image: "/profile/Ellipse 8.png"
+
+    }
+]

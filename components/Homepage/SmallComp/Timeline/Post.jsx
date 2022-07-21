@@ -16,7 +16,7 @@ import { AiOutlineHeart } from "react-icons/ai";
 import { IoShareOutline } from "react-icons/io";
 import { ImInfinite } from "react-icons/im";
 
-const Post = ({ img, name, username, time, content }) => {
+const Post = ({ img, name, username, time, content, contentPics }) => {
   const [comment, setComment] = useState(false);
   const [like, setLike] = useState(false);
   const [unlike, setUnLike] = useState(false);
@@ -40,23 +40,30 @@ const Post = ({ img, name, username, time, content }) => {
             <p className="text-[15px] font-[500] leading-[18px] ">{content}</p>
           </div>
         </div>
+        <div className="w-full ">
+          {contentPics && <Image layout="responsive" width={""} />}
+        </div>
 
         {/* Icons */}
-        <div className="flex justify-between w-[90%] mt-[10px]">
+        <div className="flex justify-between w-[80%] mt-[10px]">
           <div
             className="cursor-pointer"
             onClick={() => {
               setComment(!comment);
             }}
           >
-            <img src="/icons/post-icons/comment-icon.svg" alt="" className="" />
+            <img
+              src="/icons/post-icons/comment-icon.svg"
+              alt=""
+              className="w-[18px] h-[18px]"
+            />
           </div>
 
           <div className="cursor-pointer">
             <img
               src="/icons/post-icons/infinity-icon.svg"
               alt=""
-              className=""
+              className="w-[18px] h-[18px]"
             />
           </div>
           <div
@@ -68,11 +75,15 @@ const Post = ({ img, name, username, time, content }) => {
             <img
               src="/icons/post-icons/dislike-icon.svg"
               alt=""
-              className={`${unlike && ""} text-[30px]`}
+              className={`${unlike && ""} text-[30px] w-[18px] h-[18px]`}
             />
           </div>
           <div className="cursor-pointer">
-            <img src="/icons/post-icons/like-icon.svg" alt="" className="" />
+            <img
+              src="/icons/post-icons/like-icon.svg"
+              alt=""
+              className="w-[18px] h-[18px]"
+            />
           </div>
           <div className="cursor-pointer">
             <img src="/icons/post-icons/share-icon.svg" alt="" className="" />
