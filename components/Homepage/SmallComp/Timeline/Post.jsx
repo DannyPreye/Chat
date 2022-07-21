@@ -22,7 +22,7 @@ const Post = ({ img, name, username, time, content, contentPics }) => {
   const [unlike, setUnLike] = useState(false);
 
   return (
-    <div className="grid place-items-center py-[20px]">
+    <div className="grid place-items-center pt-[20px]">
       <div className="w-[90%] grid place-items-center">
         <div className="grid grid-cols-[1fr,10fr]   w-full">
           <div className="col-span-1">
