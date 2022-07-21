@@ -5,7 +5,6 @@ import Button from "../../components/Button";
 import PinInput from "../../components/PinInput";
 
 const emailAuth = () => {
-  const inputs = useRef();
   const inputElements = [];
   // useEffect(() => {
   //   // work on this later
@@ -24,7 +23,7 @@ const emailAuth = () => {
           An authentication code has been sent to +234 803 875 5279
         </h3>
         <div className="w-full grid place-items-center  mt-[20px]">
-          <div ref={inputs} className="flex gap-[20px]  justify-center w-[80%]">
+          <div className="flex gap-[20px]  justify-center w-[80%]">
             {[1, 2, 3, 4, 5, 6].map((id) => (
               <PinInput key={id} />
             ))}
