@@ -6,6 +6,9 @@ import Image from "next/image";
 // custom components
 import { useState } from "react";
 
+// Framer Motion
+import {motion} from "framer-motion"
+
 // custom component
 import IconComp from "./IconComp";
 import ProfilePic from "./ProfilePic";
@@ -22,6 +25,7 @@ const Post = ({ img, name, username, time, content, contentPics }) => {
   const [like, setLike] = useState(false);
   const [unlike, setUnLike] = useState(false);
   const [dslk, setDslk] = useState("")
+  const [lk, setLk] = useState("")
 
   return (
     <div className="grid place-items-center pt-[20px]">
@@ -48,7 +52,7 @@ const Post = ({ img, name, username, time, content, contentPics }) => {
 
 
         {/*:::::::::::::::::::::: Icons  :::::::::::::::::::::::::::::::::::::::::::::::::*/}
-        <div className="flex justify-between w-[77%] mt-[10px] items-center pb-1">
+        <div className="flex justify-between w-[80%] mt-[10px] items-center pb-1">
           <div
             className="cursor-pointer"
             onClick={() => {
@@ -77,9 +81,12 @@ const Post = ({ img, name, username, time, content, contentPics }) => {
           </div>
           <div className="cursor-pointer" onClick={() => {
               setLike(!like);
-              console.log(like)
+              setLk(1)
+          
             }}>
             <IconComp Icon={AiOutlineHeart}  className={`${like && "text-coolBlue"}`} />
+            <p className="absolute top-[-2px] right-[-2px] text-[12px] text-coolBlue">{lk}</p>
+
           </div>
           <div className="cursor-pointer">
             <IconComp Icon={MdIosShare} alt="" className="" />
@@ -87,7 +94,7 @@ const Post = ({ img, name, username, time, content, contentPics }) => {
         </div>
 
         {/*::::::::::::::::::::::::::::::::::: COMMENTS ::::::::::::::::::::::::::::::::::::::::::::::::::::  */}
-        <div className={`w-full ${!comment && "hidden"} pb-2`}>
+        <motion.div  transition={{duration:2}} exit={{opacity:0}} className={`w-[80%] ${!comment && "hidden"} pb-2`}>
           <textarea
             name=""
             id=""
@@ -97,12 +104,12 @@ const Post = ({ img, name, username, time, content, contentPics }) => {
           <div className="w-full flex justify-end">
 
           <button
-            className="py-2 px-4 rounded-[20px] bg-coolBlue text-[12px]font-[500] text-white"
+            className="py-[4px] px-[8px] rounded-[20px] bg-coolBlue text-[12px]font-[500] text-white"
           >
             Comment
           </button>
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

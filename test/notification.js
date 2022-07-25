@@ -97,25 +97,25 @@ export const tourPics = [
         height: 310
     },
     {
-        img: "/masonry/Rectangle 84.png",
+        img: "/masonry/Rectangle 85.png",
         width: 181,
-        height: 427,
+        height: 310,
 
     },
     {
-        img: "/masonry/Rectangle 85.png",
-        width: 174,
-        height: 310,
-    },
-    {
-        img: "/masonry/Rectangle 86.png",
-        width: 419,
-        height: 263
+        img: "/masonry/Rectangle 84.png",
+        width: 181,
+        height: 437,
     },
     {
         img: "/masonry/Rectangle 87.png",
         width: 323,
         height: 180
+    },
+    {
+        img: "/masonry/Rectangle 86.png",
+        width: 419,
+        height: 263
     },
     {
         img: "/masonry/Rectangle 88.png",
@@ -126,7 +126,7 @@ export const tourPics = [
     {
         img: "/masonry/Rectangle 89.png",
         width: 323,
-        height: 183
+        height: 185
     },
     {
         img: "/masonry/Rectangle 90.png",

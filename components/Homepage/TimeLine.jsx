@@ -8,8 +8,7 @@ import {
   Modal,
   ModalOverlay,
   ModalContent,
-  ModalHeader,
-  ModalFooter,
+
   ModalBody,
   ModalCloseButton,
 } from "@chakra-ui/react";
@@ -29,7 +28,7 @@ const TimeLine = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
-    <div className=" w-[608px] relative ">
+    <div className=" w-[680px] relative ">
       <Modal isOpen={isOpen} onClose={onClose} isCentered={true} size="xl">
         <ModalOverlay />
         <ModalContent>
