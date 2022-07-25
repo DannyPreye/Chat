@@ -75,8 +75,11 @@ const Post = ({ img, name, username, time, content, contentPics }) => {
             {}
             <p className="absolute top-[-2px] right-[-2px] text-[12px] text-coolBlue">{dslk}</p>
           </div>
-          <div className="cursor-pointer">
-            <IconComp Icon={AiOutlineHeart} alt="" className={``} />
+          <div className="cursor-pointer" onClick={() => {
+              setLike(!like);
+              console.log(like)
+            }}>
+            <IconComp Icon={AiOutlineHeart}  className={`${like && "text-coolBlue"}`} />
           </div>
           <div className="cursor-pointer">
             <IconComp Icon={MdIosShare} alt="" className="" />

@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import Picker from "emoji-picker-react";
 import { Grid } from "@giphy/react-components";
 import { GiphyFetch } from "@giphy/js-fetch-api";
-import { Carousel } from "@giphy/react-components";
+
 
 // custom components
 import ProfilePic from "./ProfilePic";
@@ -133,8 +133,7 @@ const CreatePost = ({ gifs }) => {
           )}
           {gif && (
             <Grid
-              gifWidth={200}
-              gifHeight={200}
+              width={200}
               initial={gifs}
               columns={3}
               gutter={6}
