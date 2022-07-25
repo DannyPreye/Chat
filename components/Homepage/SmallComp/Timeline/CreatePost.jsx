@@ -110,7 +110,7 @@ const CreatePost = ({ gifs }) => {
           </div>
           <button
             onClick={beep}
-            className="w-[64px] h-[40px] rounded-[10px] bg-coolBlue text-[15px]font-[500] text-white"
+            className="w-[64px] h-[40px] rounded-[20px] bg-coolBlue text-[12px]font-[500] text-white"
           >
             Beep
           </button>
@@ -132,7 +132,7 @@ const CreatePost = ({ gifs }) => {
             />
           )}
           {gif && (
-            <Carousel
+            <Grid
               gifWidth={200}
               gifHeight={200}
               initial={gifs}

@@ -21,6 +21,7 @@ const Post = ({ img, name, username, time, content, contentPics }) => {
   const [comment, setComment] = useState(false);
   const [like, setLike] = useState(false);
   const [unlike, setUnLike] = useState(false);
+  const [dslk, setDslk] = useState("")
 
   return (
     <div className="grid place-items-center pt-[20px]">
@@ -45,8 +46,9 @@ const Post = ({ img, name, username, time, content, contentPics }) => {
           {contentPics && <Image layout="responsive" width={""} />}
         </div>
 
-        {/* Icons */}
-        <div className="flex justify-between w-[80%] mt-[10px]">
+
+        {/*:::::::::::::::::::::: Icons  :::::::::::::::::::::::::::::::::::::::::::::::::*/}
+        <div className="flex justify-between w-[77%] mt-[10px] items-center pb-1">
           <div
             className="cursor-pointer"
             onClick={() => {
@@ -60,15 +62,18 @@ const Post = ({ img, name, username, time, content, contentPics }) => {
             <IconComp Icon={ImInfinite} className="" />
           </div>
           <div
-            className={`cursor-pointer `}
+            className={`cursor-pointer relative`}
             onClick={() => {
               setUnLike(!unlike);
+              !unlike ? setDslk(1) : setDslk("")
             }}
           >
             <IconComp
               Icon={TbHeartBroken}
               className={`${unlike && "text-red"} `}
             />
+            {}
+            <p className="absolute top-[-2px] right-[-2px] text-[12px] text-coolBlue">{dslk}</p>
           </div>
           <div className="cursor-pointer">
             <IconComp Icon={AiOutlineHeart} alt="" className={``} />
@@ -77,17 +82,22 @@ const Post = ({ img, name, username, time, content, contentPics }) => {
             <IconComp Icon={MdIosShare} alt="" className="" />
           </div>
         </div>
-        <div className={`w-full ${!comment && "hidden"}`}>
+
+        {/*::::::::::::::::::::::::::::::::::: COMMENTS ::::::::::::::::::::::::::::::::::::::::::::::::::::  */}
+        <div className={`w-full ${!comment && "hidden"} pb-2`}>
           <textarea
             name=""
             id=""
-            placeholder="Make a comment"
+            placeholder="Type your reply"
             className="min-w-full resize-none border-transparent focus:border-transparent focus:outline-transparent focus:ring-0"
           ></textarea>
           <div className="w-full flex justify-end">
-            <button className="bg-coolBlue px-4 py-2 rounded-[10px] text-white">
-              comment
-            </button>
+
+          <button
+            className="py-2 px-4 rounded-[20px] bg-coolBlue text-[12px]font-[500] text-white"
+          >
+            Comment
+          </button>
           </div>
         </div>
       </div>
