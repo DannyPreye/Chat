@@ -12,13 +12,14 @@ import { tourPics } from "../../test/notification";
 
 // next components
 
+import {motion} from "framer-motion"
 
 
 import Masonry from "react-masonry-css";
 
 const tour = () => {
   return (
-  <main className="grid place-items-center w-[680px]">
+  <motion.main intial={{opacity:0, scale:0.1}} animate={{opacity:1}} transition={{duration:3, type:'linear'}} exit={{opacity:0}} className="grid place-items-center w-[680px]">
    <div className="w-[90%] grid"> <h1 className="text-[20px] leading-[30px] font-[500]  text-coolBlue">Tour</h1></div>
      <Flex as={Masonry} w="90%" breakpointCols={3} > 
      
@@ -27,7 +28,7 @@ const tour = () => {
       })}
 
     </Flex>
-  </main>
+  </motion.main>
   );
 };
 

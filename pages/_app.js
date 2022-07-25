@@ -1,5 +1,6 @@
 import '../styles/globals.css'
 import Head from "next/head"
+import {AnimatePresence} from "framer-motion"
 
 import { ChakraProvider } from '@chakra-ui/react'
 
@@ -13,7 +14,9 @@ function MyApp({ Component, pageProps }) {
         <link rel='icon' type='image/png' href='/beeperIcon.png' />
       </Head>
       <Layout>
+        <AnimatePresence>
         <Component {...pageProps} />
+        </AnimatePresence>
       </Layout>
 
     </ChakraProvider>

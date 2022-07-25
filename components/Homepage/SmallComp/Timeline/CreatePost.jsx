@@ -5,6 +5,8 @@ import Picker from "emoji-picker-react";
 import { Grid } from "@giphy/react-components";
 import { GiphyFetch } from "@giphy/js-fetch-api";
 
+// Framer motion
+import {motion} from "framer-motion"
 
 // custom components
 import ProfilePic from "./ProfilePic";
@@ -108,12 +110,14 @@ const CreatePost = ({ gifs }) => {
               </label>
             </div>
           </div>
-          <button
+          <motion.button
+           whileHover={{ scale: 1.1 }}
+           whileTap={{ scale: 0.8 }}
             onClick={beep}
             className="w-[64px] h-[40px] rounded-[20px] bg-coolBlue text-[12px]font-[500] text-white"
           >
             Beep
-          </button>
+          </motion.button>
         </div>
         <div className=" w-full">
           {gifImage && <img src={gifImage} alt="" width={200} height={200} />}

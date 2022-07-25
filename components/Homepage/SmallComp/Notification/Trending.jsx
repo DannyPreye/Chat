@@ -8,7 +8,7 @@ const Trending = ({ trending, topic, beeps }) => {
       </h5>
       <div className="flex justify-between items-center">
         <h3 className="font-[500] text-[16px] leading-[24px]">{topic}</h3>
-        <div className="flex gap-[4px] ">
+        <div className="flex gap-[4px] cursor-pointer">
           {[1, 2, 3].map((icon) => {
             return (
               <img
