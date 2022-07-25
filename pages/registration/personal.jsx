@@ -10,7 +10,7 @@ import FormButton from "../../components/form/FormButton";
 const registration = () => {
   return (
     <Layout>
-      <div className=" grid h-screen  place-items-center">
+      <div className=" grid h-screen overflow-y-hidden  place-items-center">
         <div className=" grid place-items-center">
           <div className="grid place-items-center md:block w-[357px] mt-10 ">
             <div className="flex items-center gap-[0.5em]">

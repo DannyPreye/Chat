@@ -27,7 +27,7 @@ const Menu = () => {
             <Image src="/beeperchat/Asset1.svg" alt="" width={60} height={60} />
           </div>
           <MenuItem
-            content="TimeLine"
+            content="Timeline"
             Icon={AiFillHome}
             link="/home/timeLine"
           />

@@ -1,9 +1,9 @@
 import React from "react";
 
-const IconComp = ({ Icon }) => {
+const IconComp = ({ Icon, className }) => {
   return (
     <>
-      <Icon className="w-[20px] h-[20px] text-text-gray" />
+      <Icon className={`w-[20px] h-[20px] text-text-gray ${className}`} />
     </>
   );
 };

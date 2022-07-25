@@ -20,7 +20,7 @@ const Input = ({ type, id, date, name, label, placeholder }) => {
     type === "password" && setClick(true);
   };
   return (
-    <div className="h-fit w-[357px] mt-[5px]">
+    <div className="h-fit w-[357px] mt-[15px]">
       {/* <label className="text-[1.2vw] leading-[20px] font-[500]" htmlFor={id}>
         {label}
       </label> */}

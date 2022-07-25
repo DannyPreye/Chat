@@ -13,8 +13,9 @@ import ProfilePic from "./ProfilePic";
 // icons
 import { BsChat } from "react-icons/bs";
 import { AiOutlineHeart } from "react-icons/ai";
-import { IoShareOutline } from "react-icons/io";
+import { MdIosShare } from "react-icons/md";
 import { ImInfinite } from "react-icons/im";
+import { TbHeartBroken } from "react-icons/tb";
 
 const Post = ({ img, name, username, time, content, contentPics }) => {
   const [comment, setComment] = useState(false);
@@ -52,19 +53,11 @@ const Post = ({ img, name, username, time, content, contentPics }) => {
               setComment(!comment);
             }}
           >
-            <img
-              src="/icons/post-icons/comment-icon.svg"
-              alt=""
-              className="w-[18px] h-[18px]"
-            />
+            <IconComp Icon={BsChat} alt="" className="w-[18px] h-[18px]" />
           </div>
 
           <div className="cursor-pointer">
-            <img
-              src="/icons/post-icons/infinity-icon.svg"
-              alt=""
-              className="w-[18px] h-[18px]"
-            />
+            <IconComp Icon={ImInfinite} className="" />
           </div>
           <div
             className={`cursor-pointer `}
@@ -72,21 +65,16 @@ const Post = ({ img, name, username, time, content, contentPics }) => {
               setUnLike(!unlike);
             }}
           >
-            <img
-              src="/icons/post-icons/dislike-icon.svg"
-              alt=""
-              className={`${unlike && ""} text-[30px] w-[18px] h-[18px]`}
+            <IconComp
+              Icon={TbHeartBroken}
+              className={`${unlike && "text-red"} `}
             />
           </div>
           <div className="cursor-pointer">
-            <img
-              src="/icons/post-icons/like-icon.svg"
-              alt=""
-              className="w-[18px] h-[18px]"
-            />
+            <IconComp Icon={AiOutlineHeart} alt="" className={``} />
           </div>
           <div className="cursor-pointer">
-            <img src="/icons/post-icons/share-icon.svg" alt="" className="" />
+            <IconComp Icon={MdIosShare} alt="" className="" />
           </div>
         </div>
         <div className={`w-full ${!comment && "hidden"}`}>
@@ -94,7 +82,7 @@ const Post = ({ img, name, username, time, content, contentPics }) => {
             name=""
             id=""
             placeholder="Make a comment"
-            className="min-w-full border-transparent resize-none border-transparent focus:border-transparent focus:outline-transparent focus:ring-0"
+            className="min-w-full resize-none border-transparent focus:border-transparent focus:outline-transparent focus:ring-0"
           ></textarea>
           <div className="w-full flex justify-end">
             <button className="bg-coolBlue px-4 py-2 rounded-[10px] text-white">
