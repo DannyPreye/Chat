@@ -5,10 +5,10 @@ import { Grid, GridItem } from "@chakra-ui/react";
 import { Flex, Spacer, Box, Image } from '@chakra-ui/react'
 
 // custom layout
-import HomeLayout from "../../Layout/HomeLayout";
+import HomeLayout from "../../../Layout/HomeLayout";
 
 //test values
-import { tourPics } from "../../test/notification";
+import { tourPics } from "../../../test/notification";
 
 // next components
 

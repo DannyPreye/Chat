@@ -36,6 +36,7 @@ const Menu = () => {
             content="Notification"
             Icon={IoIosNotificationsOutline}
             link="/home/notification"
+            notification
           />
           <MenuItem content="Messages" Icon={BiEnvelope} link="/home/message" />
           <MenuItem content="Saved" Icon={BsBookmark} link="/home/saved" />
