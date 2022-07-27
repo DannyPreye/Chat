@@ -8,7 +8,6 @@ import {
   Modal,
   ModalOverlay,
   ModalContent,
-
   ModalBody,
   ModalCloseButton,
 } from "@chakra-ui/react";
@@ -21,8 +20,13 @@ import { post } from "../../test/notification";
 const CreatePost = dynamic(() => import("./SmallComp/Timeline/CreatePost"), {
   ssr: false,
 });
-
 import Post from "./SmallComp/Timeline/Post";
+
+// Framer-motion
+import {motion} from "framer-motion"
+
+
+
 
 const TimeLine = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -39,13 +43,15 @@ const TimeLine = () => {
         </ModalContent>
       </Modal>
 
-      <div
+      <motion.div
+         whileHover={{ scale: 1.2 }}
+         whileTap={{ scale: 0.8 }}
         onClick={onOpen}
         htmlFor="post"
         className="w-[40px] h-[40px] cursor-pointer rounded-full bg-coolBlue grid place-items-center fixed right-[33%] bottom-10"
       >
         <img src="/icons/pen-icon.svg" alt="" className="h-[20px] w-[20px]" />
-      </div>
+      </motion.div>
       <div className="grid place-items-center my-[20px]">
         <h1 className="text-[24px] leading-[36px] w-[90%] text-coolBlue ">
           Timeline

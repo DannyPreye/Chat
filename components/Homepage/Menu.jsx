@@ -1,4 +1,4 @@
-import React, { Profiler } from "react";
+import React from "react";
 
 // next component
 import Image from "next/image";
@@ -37,8 +37,8 @@ const Menu = () => {
             Icon={IoIosNotificationsOutline}
             link="/home/notification"
           />
-          <MenuItem content="Messages" Icon={BiEnvelope} />
-          <MenuItem content="Saved" Icon={BsBookmark} />
+          <MenuItem content="Messages" Icon={BiEnvelope} link="/home/message" />
+          <MenuItem content="Saved" Icon={BsBookmark} link="/home/saved" />
           <MenuItem content="Profile" Icon={BiUser} />
           <MenuItem content="More" Icon={CgMoreO} />
         </div>

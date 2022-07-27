@@ -51,6 +51,9 @@ const CreatePost = ({ gifs }) => {
     setGifImage(e.images.original.url);
     setGif(false);
   };
+
+
+  
   return (
     <div className="grid place-items-center py-[12px]r relative">
       <div className="w-[90%] grid place-items-center relative ">

@@ -113,7 +113,8 @@ const Post = ({ img, name, username, time, content, contentPics }) => {
           {/*::::::::::::::::::::::::::::::::::: COMMENTS ::::::::::::::::::::::::::::::::::::::::::::::::::::  */}
           <motion.div
             initial={{ scale: 0.5, opacity:0}}
-            animate={{ scale: 1 }}
+            animate={{ scale: 1, opacity:1}}
+            transition={{duration:2}}
             exit={{ opacity: 0 }}
             className={`w-[80%] ${!comment && "hidden"} pb-2`}
           >
