@@ -18,7 +18,7 @@ const Auth = () => {
   return (
     <AuthLayout heading="Authenticate your Account">
       <div className="h-[310px] w-[675px]">
-        <h3 className="font-[500] text-[20px] leading-[35.85px] text-center text-coolBlue">
+        <h3 className="font-[500] text-[18px] leading-[35.85px] text-center text-coolBlue">
           Select your preferred authentication method
         </h3>
         <div className="w-full grid place-items-center mt-[20px]">

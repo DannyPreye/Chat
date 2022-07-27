@@ -18,12 +18,12 @@ const RadioInput = ({
         id={id}
         name="account"
         style={{ borderColor: borderColor }}
-        className={`bg-transparent h-[20px] w-[20px] border-[3px] `}
+        className={`bg-transparent h-[15px] w-[15px] border-[2px] `}
       />
 
       <label
         htmlFor={id}
-        className={`font-poppins font-[400] h-[29px] md:text-[20px] text-${color} leading-[119.5%]  mt-[20px]`}
+        className={`font-poppins font-[400] h-[29px] md:text-[15px] text-${color} leading-[119.5%]  mt-[5px]`}
       >
         {text}
       </label>
