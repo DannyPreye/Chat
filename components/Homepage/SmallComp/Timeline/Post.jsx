@@ -10,12 +10,28 @@ import { useState } from "react";
 import IconComp from "./IconComp";
 import ProfilePic from "./ProfilePic";
 
+// chakra ui
+import {
+  Button,
+  Popover,
+  Portal,
+  PopoverTrigger,
+  PopoverContent,
+  PopoverHeader,
+  PopoverBody,
+  PopoverFooter,
+  PopoverArrow,
+  PopoverCloseButton,
+  PopoverAnchor,
+} from '@chakra-ui/react'
+
 // icons
 import { BsChat } from "react-icons/bs";
 import { AiOutlineHeart } from "react-icons/ai";
 import { MdIosShare } from "react-icons/md";
 import { ImInfinite } from "react-icons/im";
 import { TbHeartBroken } from "react-icons/tb";
+import { FaHeartBroken,FaHeart} from "react-icons/fa"
 
 // Framer motion
 import { motion, AnimatePresence } from "framer-motion";
@@ -59,6 +75,7 @@ const Post = ({ img, name, username, time, content, contentPics }) => {
           </div>
 
           {/*:::::::::::::::::::::: Icons  :::::::::::::::::::::::::::::::::::::::::::::::::*/}
+
           <div className="flex justify-between w-[80%] mt-[10px] items-center pb-1">
             <div
               className="cursor-pointer"
@@ -70,8 +87,23 @@ const Post = ({ img, name, username, time, content, contentPics }) => {
             </div>
 
             <div className="cursor-pointer">
-              <IconComp Icon={ImInfinite} className="" />
+
+              <Popover>
+                <PopoverTrigger>
+                  <Button bg="transparent" _hover={{background:"transparent"}} _active={{background:"transparent"}}><IconComp Icon={ImInfinite} className="" /></Button>
+                </PopoverTrigger>
+                <Portal>
+    <PopoverContent>
+      <PopoverArrow />
+      <PopoverCloseButton />
+      <PopoverBody>
+        <Button colorScheme='blue'>Button</Button>
+      </PopoverBody>
+    </PopoverContent>
+  </Portal>
+              </Popover>
             </div>
+
             <div
               className={`cursor-pointer relative`}
               onClick={() => {
@@ -83,12 +115,12 @@ const Post = ({ img, name, username, time, content, contentPics }) => {
             >
               <IconComp
                 Icon={TbHeartBroken}
-                className={`${unlike && "text-red"} `}
+                className={`${unlike ? "hidden":"block"} `}
               />
-              {}
-              <p className="absolute top-[-2px] right-[-2px] text-[12px] text-coolBlue">
+              <IconComp Icon={FaHeartBroken} className={`text-red ${!unlike? "hidden":"block"}`} />
+              <motion.p intial={{opacity:0}} animate={{opacity:1}} transition={{duration:2}} className="absolute top-[4px] right-[-6px] text-[14px] text-coolBlue">
                 {dslk !== 0 && dslk}
-              </p>
+              </motion.p>
             </div>
             <div
               className="cursor-pointer relative"
@@ -99,11 +131,12 @@ const Post = ({ img, name, username, time, content, contentPics }) => {
             >
               <IconComp
                 Icon={AiOutlineHeart}
-                className={`${like && "text-blue-600"}`}
+                className={`${like? "hidden":"block"}`}
               />
-              <p className="absolute top-[-2px] right-[-2px] text-[12px] text-coolBlue">
+              <IconComp Icon={FaHeart} className={`text-red ${!like? "hidden":"block"}`} />
+              <motion.p intial={{opacity:0}} animate={{opacity:1}} transition={{duration:2}} className="absolute top-[4px] right-[-6px] text-[14px] text-coolBlue">
                 {lk !== 0 && lk}
-              </p>
+              </motion.p>
             </div>
             <div className="cursor-pointer">
               <IconComp Icon={MdIosShare} alt="" className="" />
