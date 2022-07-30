@@ -9,6 +9,7 @@ import { useState } from "react";
 // custom component
 import IconComp from "./IconComp";
 import ProfilePic from "./ProfilePic";
+import Rebeeb from "./Rebeeb.jsx"
 
 // chakra ui
 import {
@@ -97,7 +98,7 @@ const Post = ({ img, name, username, time, content, contentPics }) => {
       <PopoverArrow />
       <PopoverCloseButton />
       <PopoverBody>
-        <Button colorScheme='blue'>Button</Button>
+        <Rebeeb />
       </PopoverBody>
     </PopoverContent>
   </Portal>
