@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 
+//  Custom components
 import AuthLayout from "../../components/AuthLayout";
 import RadioInput from "../../components/RadioInput";
 import Button from "../../components/Button";
 
 const Auth = () => {
+
+  
   const [authType, setAuthType] = useState("");
 
   const handleChange = (e) => {
@@ -21,6 +24,7 @@ const Auth = () => {
         <h3 className="font-[500] text-[18px] leading-[35.85px] text-center text-coolBlue">
           Select your preferred authentication method
         </h3>
+
         <div className="w-full grid place-items-center mt-[20px]">
           <div className="flex flex-col items-start w-[70%]">
             <RadioInput
@@ -41,6 +45,8 @@ const Auth = () => {
             />
           </div>
         </div>
+
+
         <div className="grid place-items-center mt-[30px] mb-[120px]">
           <Button big>
             <Link

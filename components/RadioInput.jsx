@@ -1,5 +1,8 @@
 import React from "react";
 import { useState } from "react";
+
+
+
 const RadioInput = ({
   text,
   id,
@@ -9,6 +12,8 @@ const RadioInput = ({
   color,
   borderColor,
 }) => {
+
+  
   return (
     <div className="flex justify-center gap-[10px] items-baseline h-fit">
       <input
